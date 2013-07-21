@@ -17,16 +17,16 @@ int compare_function(const void *a,const void *b)
 int main()
 {
 
-	long n,i,required,previous,current,present;
-	long diff[3000], difference,flag;
-	while(scanf("%ld",&n)!=EOF)
+	int n,i,required,previous,current,present;
+	int diff[3000], difference,flag;
+	while(scanf("%d",&n)!=EOF)
 	{
 		previous=0;
 		present=0;
 		required = sum(n-1);
 		for(i=0;i<n;i++)
 		{
-			scanf("%ld",&current);
+			scanf("%d",&current);
 			if(i!=0)
 			{
 				difference=abs(current-previous);
@@ -39,7 +39,7 @@ int main()
 		flag=1;
 		if(present==required)
 		{
-			qsort(diff,n-1,sizeof(long),compare_function);
+			qsort(diff,n-1,sizeof(int),compare_function);
 			/*for(i=0;i<n-1;i++)
 				printf("%ld ",diff[i]); */
 			for(i=0;i<n-1;i++)
